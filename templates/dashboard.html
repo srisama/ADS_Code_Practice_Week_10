@@ -1,0 +1,76 @@
+{% extends "index.html" %}
+
+{% block body %}
+
+
+
+<div class="tab-panel" >
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="text-align:center">
+    
+    </li>
+    <li role="presentation" style="text-align:center"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Data Exploration</a></li>
+    <li>||</li>
+    <li role="presentation" style="text-align:center"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Data Visualization</a>
+    </li>
+    <li>||</li>
+    <li role="presentation" style="text-align:center"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Regression Analysis</a>
+    </li>
+  </ul>
+
+  
+
+
+
+
+  <!-- Tab panes -->
+  <div class="tab-content" style="text-align:center">
+    <div role="tabpanel" class="tab-pane active" id="home">
+
+      <h2>Introduction</h2>
+
+      <p style="text-align:center"> Code Practice - Applied Data Science- FA22 </p>
+      <p style="text-align:center">
+      <ul>
+        <li> Submitted by :Sridhar Reddy Sama </li>
+        <li> Assignment : Week 10 Code Practice</li>
+        <li> Topic      : Python-Flask Web Appl.</li>
+        <li> Date       : 11/01/2022</li>
+      </ul>
+      </p>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab2">
+      <h2> Exploring the data </h2>
+      <p style="text-align:center">
+        {% for table in tables %}
+        {{titles[loop.index]}}
+        {{ table|safe }}
+        {% endfor %}
+      </p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab3" style="align-content: center;">
+
+      <h2> Visualization </h2>
+      <img style="width:1600px;height:600px; margin-top: -7px;" src="{{ url_for('static', filename='images/base_pic.png') }}">
+      <form method="POST">
+        <label>Input a comma-separated list of age values: </label>
+        <input name="text">
+        <input type="submit">
+      </form>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab4">
+
+      <h2>Regression Analysis</h2>
+      <p>to be created...</p>
+
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

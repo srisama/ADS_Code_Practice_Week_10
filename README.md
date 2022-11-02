@@ -23,5 +23,5 @@
 
 
 ## Screen Shot -6
-<img src="/images/ScreenShot_Dashboard-5.jpg" alt="Screen Shot -6"/>
+<img src="/images/ScreenShot_Dashboard-6.jpg" alt="Screen Shot -6"/>
 
